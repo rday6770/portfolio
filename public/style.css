@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Inter";
+}
+
+h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 42px;
+
+  color: #000000;
+}
+
+.Header .header-nav {
+  padding: 16px 124px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.Header .header-nav .site-title {
+  flex: 1 0 auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+.main {
+  background-color: aquamarine;
+}
+
+.Content-1 {
+  background-color: aliceblue;
+  position: absolute;
+  width: 503px;
+  height: 916px;
+  left: 46px;
+  top: 174px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 30px;
+}
+
+.Content-2 {
+  background-color: aliceblue;
+  position: absolute;
+  width: 580px;
+  height: 566.33px;
+  left: 580px;
+  top: 173px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 30px;
+}
+
+.Content-3 {
+  background-color: aliceblue;
+  position: absolute;
+  width: 509px;
+  height: 239px;
+  left: 1191px;
+  top: 173px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 30px;
+}
+
+.Content-4 {
+  background-color: aliceblue;
+  position: absolute;
+  width: 580px;
+  height: 317px;
+  left: 584px;
+  top: 772px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 30px;
+}
+
+.Content-5 {
+  background-color: aliceblue;
+  position: absolute;
+  width: 491px;
+  height: 429px;
+  left: 1191px;
+  top: 438px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+.Content-6 {
+  background-color: aliceblue;
+  position: absolute;
+  width: 491px;
+  height: 192px;
+  left: 1191px;
+  top: 897px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+/* }
+.Content .content-containter {
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  padding: 0px 124px;
+  padding-bottom: 20%;
+}
+
+.Content .content-containter .content-info {
+  background-color: #147e6a;
+  flex: 1;
+  text-decoration: none;
+  margin-left: 36px;
+  transform: scale(0.95);
+  transition: transform 0.2s ease-in;
+  padding-bottom: 300px;
+} */
