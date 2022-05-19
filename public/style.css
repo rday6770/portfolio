@@ -42,6 +42,21 @@ h3 {
   color: #000000;
 }
 
+h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+
+  color: #c4c4c4;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .Header {
   display: flex;
   flex-direction: row;
@@ -78,6 +93,113 @@ h3 {
   background: #f9fbfa;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
+}
+
+.container-one .heading {
+  padding: 0 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  height: 8%;
+}
+
+.container-one .task-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  height: 82%;
+  padding-top: 5%;
+  gap: 15px;
+}
+
+.container-one .task-container .task-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 450px;
+  height: 61px;
+
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+
+  gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container-one .task-container .task-box-element-one {
+  background-color: aquamarine;
+  width: 40px;
+  height: 40px;
+  background: #ff5f5f;
+  border-radius: 10px;
+}
+
+.container-one .task-container .task-box-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  flex: 1;
+  height: 50px;
+}
+
+.container-one .task-container .task-box-content .task-box-header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+
+  color: #ff5f5f;
+  margin-left: 10px;
+}
+
+.container-one .task-container .task-box-content .task-box-subheader {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+
+  color: #727070;
+  margin-left: 10px;
+}
+
+.container-one .task-container .task-box-element-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: aquamarine;
+  width: 40px;
+  height: 40px;
+  background: #eceeee;
+  border-radius: 10px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  color: #4f4f4f;
+}
+
+.container-one .task-container .task-box-element-three {
+  background-color: aquamarine;
+  width: 40px;
+  height: 40px;
+  background: #8646ff;
+
+  border-radius: 10px;
 }
 
 .container-two {
@@ -131,9 +253,108 @@ h3 {
 }
 
 .left-three {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   width: 509px;
   height: 192px;
   background: #f9fbfa;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
+}
+
+.left-three .stopwatch-time {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 75px;
+  line-height: 91px;
+
+  color: #c4c4c4;
+}
+
+.stopwatch-button {
+  width: 100px;
+  height: 33px;
+  background: #8646ff;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  border: none;
+  opacity: 0.8;
+}
+
+.stopwatch-button:hover {
+  opacity: 10;
+}
+
+/* CODE FOR BUTTON STYLING*/
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background: #8646ff;
+  border: none;
+  font-size: 17px;
+  border-radius: 30px;
+  opacity: 0.8;
+  color: white;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  left: 15px;
+  border: 3px solid #f1f1f1;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 10;
 }

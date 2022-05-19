@@ -2,7 +2,6 @@
 <html>
   <head>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="script.js"></script>
     <title>Wavelenth</title>
   </head>
 
@@ -18,54 +17,142 @@
     </header>
 
     <section class="content">
-      <div class="container-one"></div>
+      <div class="container-one">
+        <div class="heading">
+          <h2>Tasklist</h2>
+          <h4>Sort by: Priority</h4>
+        </div>
+        <div class="task-container">
+          <div class="task-box">
+            <div class="task-box-element-one"></div>
+            <div class="task-box-content">
+              <div class="task-box-header">
+                <p l>Hand in A3</p>
+        
+
+              </div>
+              <div class="task-box-subheader">
+                <p>Completion: 24 July 1999</p>
+              </div>
+            </div>
+            <div class="task-box-element-two">
+              <p>2H</p>
+              <p>2M</p>
+            </div>
+            <div class="task-box-element-three"></div>
+          </div>
+          <div class="task-box">
+            <div class="task-box-element-one"></div>
+            <div class="task-box-content">
+              <div class="task-box-header">
+                <p>Hand in A3</p>
+              </div>
+              <div class="task-box-subheader">
+                <p>Completion: 24 July 1999</p>
+              </div>
+            </div>
+            <div class="task-box-element-two">
+              <p>2H</p>
+              <p>2M</p>
+            </div>
+            <div class="task-box-element-three"></div>
+          </div>
+        </div>
+        <div class="heading">
+          <h4>Hide Completed Tasks</h4>
+          <button class="open-button" onclick="openForm()">+</button>
+          <div class="form-popup" id="myForm">
+            
+
+              <button type="button" class="btn cancel" onclick="closeForm()">
+                Close
+              </button>
+            </form>
+          </div>
+
+          <script>
+            function openForm() {
+              document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+              document.getElementById("myForm").style.display = "none";
+            }
+          </script>
+        </div>
+      </div>
       <div class="container-two">
-        <div class="middle-one"></div>
-        <div class="middle-two"></div>
+        <div class="middle-one">
+
+          <div>
+            <div id="page1" class="page-container">
+                  <div id="task-grid">
+                      <form id="taskform">
+                          <label for="task">Task:</label>
+                          <input type="text" name="task" id="taskInput" required="">
+      
+                          <!-- Date input -->
+                          <label for="dueDate">Due Date: </label>
+                          <input type="date" name="dueDate" id="dueDateInput">
+      
+                          <!-- Time input -->
+                          <label for="completionTime">Completion Time: </label>
+                          <input type="time" name="completionTime" id="completionTimeInput">
+      
+                          <label for="estimatedTime">Estimated completion time (in mins):</label>
+                          <input type="number" name="estimatedTime" id="estimatedTimeInput">
+                          <!-- Priority -->
+      
+      
+                          <label for="priority">Task Priority:</label>
+                          <select name="prority" id="priorityInput">
+                              <option value="">Select one</option>
+                              <option value="Low">Low</option>
+                              <option value="Medium">Medium</option>
+                              <option value="High">High</option>
+                          </select>
+      
+                          <br>
+      
+                          <button type="submit">Submit</button>
+                      </form>
+                      <div id="tasklist">
+                          <p id="emptyList">You have not added any tasks yet.</p>
+                          <ul></ul>
+                      </div>
+                  </div>
+              <script src="script.js"></script>
+      
+          </div>
+  </div>
+
+
+        </div>
+        <div class="middle-two">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0pf6pJ1JNucnOBHiCaad0x?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
       </div>
       <div class="container-three">
         <div class="left-one"></div>
         <div class="left-two"></div>
-        <div class="left-three"></div>
+        <div class="left-three">
+          
+          <div class="stopwatch-time">
+            <div id="time">00:00:00</div>
+          </div>
+          
+          <div>
+  
+              <button class="stopwatch-button" id="start" onclick="start()">START</button>
+              <button class="stopwatch-button"  id="pause" onclick="pause()">PAUSE</button>
+              <button class="stopwatch-button"  id="reset" onclick="reset()">RESET</button>
+           
+       
+          </div>
+          <script src="stopwatch.js"></script>
+
+        </div>
       </div>
     </section>
-
-    <!-- <section>
-        <div class="Content">
-            <div class="Content-left"> 
-              <div class="Content-1">
-                <h2>Tasklist</h2>
-              </div>
-            </div>
-
-            <div class="Content-middle"> 
-              <div class="Content-2">
-                <h2>Covey Quadrant</h2>
-                
-              </div>
-              
-              <div class="Content-3">
-                <h2>Music</h2>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/00eW6JxsoYHzySc54Wf5yP?utm_source=generator" 
-                width=100%; height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-              </div>
-            </div>
-
-            <div class="Content-right"> 
-              <div class="Content-4">
-                <h2>Dictionary</h2>
-              </div>
-
-              <div class="Content-5">
-                <h2>Pomodoro</h2>
-              </div>
-
-              <div class="Content-6">
-                <h2>Timer</h2>
-              </div>
-
-            </div> 
-        </div>
-    </section> -->
   </body>
 </html>
