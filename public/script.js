@@ -2,6 +2,7 @@
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button");
 
+
 // Selector for the tasklist output
 var tasklist = document.querySelector("#tasklist > ul");
 
@@ -11,6 +12,7 @@ var dueDateInput = document.getElementById("dueDateInput");
 var completionTimeInput = document.getElementById("completionTimeInput");
 var estimatedTimeInput = document.getElementById("estimatedTimeInput");
 var priorityInput = document.getElementById("priorityInput");
+
 
 // Form submission event listener
 form.addEventListener("submit", function (event) {
@@ -31,6 +33,7 @@ form.addEventListener("submit", function (event) {
     );
   }
 });
+
 
 // Create global array to track tasks
 var taskListArray = [];
@@ -111,3 +114,18 @@ function updateEmpty() {
     document.getElementById("emptyList").style.display = "block";
   }
 }
+
+function handleOpenModal(){
+  const modalRoot = document.getElementById('modalRoot');
+  const modalContent = document.getElementById('modalContent');
+  modalRoot.style.display = 'flex'
+  modalContent.style.display = 'block'
+}
+
+function handleCloseModal(){
+  const modalRoot = document.getElementById('modalRoot');
+  const modalContent = document.getElementById('modalContent');
+  modalRoot.style.display = 'none'
+  modalContent.style.display = 'none'
+}
+

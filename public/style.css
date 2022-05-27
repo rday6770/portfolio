@@ -250,6 +250,81 @@ p {
   background: #f9fbfa;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.left-two .keep-going {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 42px;
+
+  color: #898383;
+}
+
+.left-two .timerDisplay {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 90px;
+  line-height: 109px;
+
+  color: #8646ff;
+}
+
+.left-two .pomoButtonContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.left-two .startButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 164px;
+  height: 33px;
+
+  background: #8646ff;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ffffff;
+  border: none;
+  opacity: 0.8;
+}
+
+.startButton:hover {
+  opacity: 10;
+}
+
+.left-two .pomoButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-two .pomoButtons .pomoLeftButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-two .pomoButtons .pomoRightButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .left-three {
@@ -262,6 +337,64 @@ p {
   background: #f9fbfa;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
+}
+
+.Duration {
+  width: 180px;
+  height: 33px;
+
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #898383;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timerButtons {
+  display: flex;
+  justify-content: row;
+  justify-content: space-evenly;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ffffff;
+}
+
+.butt {
+  width: 58px;
+  height: 37px;
+  background: #cecccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-settings {
+  background: #8646ff;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  border: none;
+  opacity: 0.8;
+}
+
+.btn-settings:hover {
+  opacity: 10;
+}
+
+.noodle {
+  color: #898383;
 }
 
 .left-three .stopwatch-time {
