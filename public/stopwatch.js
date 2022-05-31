@@ -1,7 +1,7 @@
 const timer = document.querySelector("#time");
-const start_btn = document.querySelector("#start");
-const pause_btn = document.querySelector("#pause");
-const reset_btn = document.querySelector("#reset");
+const start_btn = document.querySelector("#start_stopwatch");
+const pause_btn = document.querySelector("#pause_stopwatch");
+const reset_btn = document.querySelector("#reset_stopwatch");
 
 let time = 0,
   interval;
@@ -44,11 +44,4 @@ function toHHMMSS(time) {
   seconds = `${seconds}`.padStart(2, "0");
 
   return hours + ":" + minutes + ":" + seconds;
-}
-
-function showBtn(btnArr) {
-  btnArr.forEach((btn) => (btn.style.display = "inline-block"));
-}
-function hideBtn(btnArr) {
-  btnArr.forEach((btn) => (btn.style.display = "none"));
 }

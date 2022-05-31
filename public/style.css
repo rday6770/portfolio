@@ -211,6 +211,81 @@ p {
   justify-content: space-between;
 }
 
+.container-two .covey-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 5%;
+
+  height: 15%;
+}
+
+.container-two .covey-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+
+  height: 85%;
+}
+
+.container-two .covey-content {
+  width: 270px;
+  height: 220px;
+
+  background: rgba(255, 95, 95, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.container-two .covey-content .covey-content-header {
+  width: 270px;
+  height: 48px;
+
+  background: #ff5f5f;
+  border-radius: 15px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 22px;
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-two .covey-content .covey-content-tasks {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+
+  color: #ffffff;
+
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#NotUrgent-Header {
+  background: #909090;
+}
+
+#NotUrgent-Content {
+  background: #cecccc;
+}
+
+#Important-Content {
+  background: rgba(255, 152, 95, 0.5);
+}
+
+#Important-Header {
+  background: #ff985f;
+}
+
 .container-three {
   width: 509px;
   height: 916px;

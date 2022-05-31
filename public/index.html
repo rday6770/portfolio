@@ -2,6 +2,7 @@
 <html>
  <head>
    <link href="style.css" rel="stylesheet" type="text/css" />
+  
    <title>Wavelenth</title>
  </head>
  
@@ -62,6 +63,41 @@
          <h4>Hide Completed Tasks</h4>
          <button class="open-button" onclick="openForm()">+</button>
          <div class="form-popup" id="myForm">
+          <div id="task-grid">
+            <form id="taskform">
+                <label for="task">Task:</label>
+                <input type="text" name="task" id="taskInput" required="">
+
+                <!-- Date input -->
+                <label for="dueDate">Due Date: </label>
+                <input type="date" name="dueDate" id="dueDateInput">
+
+                <!-- Time input -->
+                <label for="completionTime">Completion Time: </label>
+                <input type="time" name="completionTime" id="completionTimeInput">
+
+                <label for="estimatedTime">Estimated completion time (in mins):</label>
+                <input type="number" name="estimatedTime" id="estimatedTimeInput">
+                <!-- Priority -->
+
+
+                <label for="priority">Task Priority:</label>
+                <select name="prority" id="priorityInput">
+                    <option value="">Select one</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <br>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div id="tasklist">
+                <p id="emptyList">You have not added any tasks yet.</p>
+                <ul></ul>
+            </div>
+        </div>
           
  
              <button type="button" class="btn cancel" onclick="closeForm()">
@@ -70,61 +106,60 @@
            </form>
          </div>
  
-         <script>
-           function openForm() {
-             document.getElementById("myForm").style.display = "block";
-           }
- 
-           function closeForm() {
-             document.getElementById("myForm").style.display = "none";
-           }
-         </script>
+        
        </div>
      </div>
      <div class="container-two">
        <div class="middle-one">
  
-         <div>
-           <div id="page1" class="page-container">
-                 <div id="task-grid">
-                     <form id="taskform">
-                         <label for="task">Task:</label>
-                         <input type="text" name="task" id="taskInput" required="">
-    
-                         <!-- Date input -->
-                         <label for="dueDate">Due Date: </label>
-                         <input type="date" name="dueDate" id="dueDateInput">
-    
-                         <!-- Time input -->
-                         <label for="completionTime">Completion Time: </label>
-                         <input type="time" name="completionTime" id="completionTimeInput">
-    
-                         <label for="estimatedTime">Estimated completion time (in mins):</label>
-                         <input type="number" name="estimatedTime" id="estimatedTimeInput">
-                         <!-- Priority -->
-    
-    
-                         <label for="priority">Task Priority:</label>
-                         <select name="prority" id="priorityInput">
-                             <option value="">Select one</option>
-                             <option value="Low">Low</option>
-                             <option value="Medium">Medium</option>
-                             <option value="High">High</option>
-                         </select>
-    
-                         <br>
-    
-                         <button type="submit">Submit</button>
-                     </form>
-                     <div id="tasklist">
-                         <p id="emptyList">You have not added any tasks yet.</p>
-                         <ul></ul>
-                     </div>
-                 </div>
-             <script src="script.js"></script>
-    
+         <div class="covey-heading">
+           <h2> Covey Quadrant</h2>
+        </div>
+
+        <div class="covey-container">
+          <div class="covey-content">
+            <div class="covey-content-header"> 
+              Urgent
+            </div>
+            <div class="covey-content-tasks">
+            <p> Hand in A3</p>
+            <p> Finish the work</p>
+            <p> Take a bath </p>
+            </div>
          </div>
- </div>
+          <div class="covey-content" id="NotUrgent-Content">
+            <div class="covey-content-header" id="NotUrgent-Header"> 
+              Not Urgent
+            </div>
+            <div class="covey-content-tasks" >
+              <p> Hand in A3</p>
+              <p> Finish the work</p>
+              <p> Take a bath </p>
+              </div>
+             </div>
+          <div class="covey-content" id="Important-Content"> 
+            <div class="covey-content-header" id="Important-Header"> 
+              Important
+            </div>
+            <div class="covey-content-tasks">
+              <p> Hand in A3</p>
+              <p> Finish the work</p>
+              <p> Take a bath </p>
+              </div>
+          </div>
+          <div class="covey-content" id="NotUrgent-Content"> 
+            <div class="covey-content-header" id="NotUrgent-Header"> 
+              Not Important
+            </div>
+            <div class="covey-content-tasks">
+              <p> Hand in A3</p>
+              <p> Finish the work</p>
+              <p> Take a bath </p>
+              </div>
+          </div>
+
+        </div>
+        
  
  
        </div>
@@ -132,11 +167,12 @@
          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0pf6pJ1JNucnOBHiCaad0x?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
        </div>
      </div>
+
      <div class="container-three">
        <div class="left-one"></div>
        <div class="left-two">
 
-        <div class="keep-going" id="status"> <p> Keep working </p></div>
+        <div class="keep-going" id="status"> <p> Keep working! </p></div>
         <div class="timerDisplay"> <p> 19m 20s</p></div>
         <div class="pomoButtonContainer"><button id="start-btn" class="startButton">START</button>
           <button id="reset" class="startButton">RESET</button></div>
@@ -175,28 +211,34 @@
             </div>
           </div>
           </div>
+    <script src="pomo.js" ></script> 
         </div>
-        <script src="pomo.js"></script>
-
+    
        
        <div class="left-three">
-        
+       
          <div class="stopwatch-time">
            <div id="time">00:00:00</div>
          </div>
         
          <div>
-              <button class="stopwatch-button" id="start" onclick="start()">START</button>
-             <button class="stopwatch-button"  id="pause" onclick="pause()">PAUSE</button>
-             <button class="stopwatch-button"  id="reset" onclick="reset()">RESET</button>
-         
+              <button class="stopwatch-button" id="start_stopwatch" onclick="start()">START</button>
+             <button class="stopwatch-button"  id="pause_stopwatch" onclick="pause()">PAUSE</button>
+             <button class="stopwatch-button"  id="reset_stopwatch" onclick="reset()">RESET</button>
+             
      
          </div>
-         <script src="stopwatch.js"></script>
- 
+        
+         <script src="stopwatch.js" ></script> 
+
+         <!-- this code doesnt work withthe other script  -->
        </div>
+      
       </div>
      </div>
    </section>
  </body>
+
+
+
 </html>
