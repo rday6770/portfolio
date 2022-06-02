@@ -23,7 +23,7 @@ startBtn.addEventListener("click", () => {
   clearInterval(countdown);
   isPaused = !isPaused;
   if (!isPaused) {
-    countdown = setInterval(timer, 1000);
+    countdown = setInterval(handleCountdown, 1000);
   }
 });
 
@@ -35,8 +35,7 @@ resetBtn.addEventListener("click", () => {
   isBreak = true;
 });
 
-/* TIMER - HANDLES COUNTDOWN */
-function timer() {
+function handleCountdown() {
   seconds--;
   if (seconds < 0) {
     clearInterval(countdown);
@@ -44,7 +43,7 @@ function timer() {
     alarm.play();
     seconds = (isBreak ? breakTime : workTime) * 60;
     isBreak = !isBreak;
-    countdown = setInterval(timer, 1000);
+    countdown = setInterval(handleCountdown, 1000);
   }
 }
 
@@ -102,5 +101,4 @@ function updateHTML() {
 }
 
 window.setInterval(updateHTML, 100);
-
-document.onclick = updateHTML;
+// document.onclick = updateHTML;

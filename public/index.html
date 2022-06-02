@@ -1,244 +1,184 @@
 <!DOCTYPE html>
-<html>
- <head>
-   <link href="style.css" rel="stylesheet" type="text/css" />
-  
-   <title>Wavelenth</title>
- </head>
- 
- <body>
-   <header class="Header">
-     <div class="Logo">
-       <h1>urWay</h1>
-     </div>
- 
-     <div class="Name">
-       <h3>Morty Smith</h3>
-     </div>
-   </header>
- 
-   <section class="content">
-     <div class="container-one">
-       <div class="heading">
-         <h2>Tasklist</h2>
-         <h4>Sort by: Priority</h4>
-       </div>
-       <div class="task-container">
-         <div class="task-box">
-           <div class="task-box-element-one"></div>
-           <div class="task-box-content">
-             <div class="task-box-header">
-               <p>Hand in A3</p>
-        
- 
-             </div>
-             <div class="task-box-subheader">
-               <p>Completion: 24 July 1999</p>
-             </div>
-           </div>
-           <div class="task-box-element-two">
-             <p>2H</p>
-             <p>2M</p>
-           </div>
-           <div class="task-box-element-three"></div>
-         </div>
-         <div class="task-box">
-           <div class="task-box-element-one"></div>
-           <div class="task-box-content">
-             <div class="task-box-header">
-               <p>Hand in A3</p>
-             </div>
-             <div class="task-box-subheader">
-               <p>Completion: 24 July 1999</p>
-             </div>
-           </div>
-           <div class="task-box-element-two">
-             <p>2H</p>
-             <p>2M</p>
-           </div>
-           <div class="task-box-element-three"></div>
-         </div>
-       </div>
-       <div class="heading">
-         <h4>Hide Completed Tasks</h4>
-         <button class="open-button" onclick="openForm()">+</button>
-         <div class="form-popup" id="myForm">
-          <div id="task-grid">
-            <form id="taskform">
-                <label for="task">Task:</label>
-                <input type="text" name="task" id="taskInput" required="">
+<html lang="en">
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>urWay</title>
+  </head>
 
-                <!-- Date input -->
-                <label for="dueDate">Due Date: </label>
-                <input type="date" name="dueDate" id="dueDateInput">
-
-                <!-- Time input -->
-                <label for="completionTime">Completion Time: </label>
-                <input type="time" name="completionTime" id="completionTimeInput">
-
-                <label for="estimatedTime">Estimated completion time (in mins):</label>
-                <input type="number" name="estimatedTime" id="estimatedTimeInput">
-                <!-- Priority -->
-
-
-                <label for="priority">Task Priority:</label>
-                <select name="prority" id="priorityInput">
-                    <option value="">Select one</option>
-                    <option value="Low">Low</option>
-                    <option value="Medium">Medium</option>
-                    <option value="High">High</option>
-                </select>
-
-                <br>
-
-                <button type="submit">Submit</button>
-            </form>
-            <div id="tasklist">
-                <p id="emptyList">You have not added any tasks yet.</p>
-                <ul></ul>
-            </div>
-        </div>
-          
- 
-             <button type="button" class="btn cancel" onclick="closeForm()">
-               Close
-             </button>
-           </form>
-         </div>
- 
-        
-       </div>
-     </div>
-     <div class="container-two">
-       <div class="middle-one">
- 
-         <div class="covey-heading">
-           <h2> Covey Quadrant</h2>
-        </div>
-
-        <div class="covey-container">
-          <div class="covey-content">
-            <div class="covey-content-header"> 
-              Urgent
-            </div>
-            <div class="covey-content-tasks">
-            <p> Hand in A3</p>
-            <p> Finish the work</p>
-            <p> Take a bath </p>
-            </div>
-         </div>
-          <div class="covey-content" id="NotUrgent-Content">
-            <div class="covey-content-header" id="NotUrgent-Header"> 
-              Not Urgent
-            </div>
-            <div class="covey-content-tasks" >
-              <p> Hand in A3</p>
-              <p> Finish the work</p>
-              <p> Take a bath </p>
-              </div>
-             </div>
-          <div class="covey-content" id="Important-Content"> 
-            <div class="covey-content-header" id="Important-Header"> 
-              Important
-            </div>
-            <div class="covey-content-tasks">
-              <p> Hand in A3</p>
-              <p> Finish the work</p>
-              <p> Take a bath </p>
-              </div>
-          </div>
-          <div class="covey-content" id="NotUrgent-Content"> 
-            <div class="covey-content-header" id="NotUrgent-Header"> 
-              Not Important
-            </div>
-            <div class="covey-content-tasks">
-              <p> Hand in A3</p>
-              <p> Finish the work</p>
-              <p> Take a bath </p>
-              </div>
-          </div>
-
-        </div>
-        
- 
- 
-       </div>
-       <div class="middle-two">
-         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0pf6pJ1JNucnOBHiCaad0x?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-       </div>
-     </div>
-
-     <div class="container-three">
-       <div class="left-one"></div>
-       <div class="left-two">
-
-        <div class="keep-going" id="status"> <p> Keep working! </p></div>
-        <div class="timerDisplay"> <p> 19m 20s</p></div>
-        <div class="pomoButtonContainer"><button id="start-btn" class="startButton">START</button>
-          <button id="reset" class="startButton">RESET</button></div>
-        
-        <div class="pomoButtons">
-          <div class="pomoLeftButton">
-            <div class="Duration">
-              <p> Work Duration</p>
-            </div>
-            <div class="timerButtons">
-           
-                <button class="btn-settings" id="work-plus">+</button>
-           
-        
-                <div class="noodle"><span id="work-min">5</span> mins</div>
-             
-              
-                <button class="btn-settings" id="work-minus">-</button>
-           
-            </div>
-          </div>
-          <div class="pomoRightButton">
-            <div class="Duration">
-              <p> Break Duration</p>
-            </div>
-            <div class="timerButtons">
-              
-                <button class="btn-settings" id="break-plus">+</button>
-           
-              
-                <div class="noodle"><span id="break-min">5</span> mins</div>
-            
-          
-                <button class="btn-settings" id="break-minus">-</button>
-            
-            </div>
-          </div>
-          </div>
-    <script src="pomo.js" ></script> 
-        </div>
-    
-       
-       <div class="left-three">
-       
-         <div class="stopwatch-time">
-           <div id="time">00:00:00</div>
-         </div>
-        
-         <div>
-              <button class="stopwatch-button" id="start_stopwatch" onclick="start()">START</button>
-             <button class="stopwatch-button"  id="pause_stopwatch" onclick="pause()">PAUSE</button>
-             <button class="stopwatch-button"  id="reset_stopwatch" onclick="reset()">RESET</button>
-             
-     
-         </div>
-        
-         <script src="stopwatch.js" ></script> 
-
-         <!-- this code doesnt work withthe other script  -->
-       </div>
-      
+  <body>
+    <header class="Header">
+      <div class="Logo">
+        <h1>urWay</h1>
       </div>
-     </div>
-   </section>
- </body>
+    </header>
 
+    <section class="content">
+      <div class="container-one">
+        <div class="heading">
+          <h2>Tasklist</h2>
+        </div>
+        <div id="taskListRoot" class="task-container"></div>
+        <div class="heading">
+          <h4></h4>
+          <button
+            type="button"
+            id="openModalButton"
+            onclick="handleOpenModal()"
+            class="open-button"
+          >
+            +
+          </button>
+        </div>
+      </div>
+      <div class="container-two">
+        <div class="middle-one">
+          <div class="covey-heading">
+            <h2>Covey Quadrant</h2>
+          </div>
 
+          <div class="covey-container">
+            <div class="covey-content">
+              <div class="covey-content-header">Urgent / Important</div>
+              <div class="covey-content-tasks">
+                <p>Hand in A3</p>
+                <p>Finish the work</p>
+                <p>Take a bath</p>
+              </div>
+            </div>
+            <div class="covey-content" id="NotUrgent-Content">
+              <div class="covey-content-header" id="NotUrgent-Header">
+                Not Urgent / Important
+              </div>
+              <div class="covey-content-tasks">
+                <p>Hand in A3</p>
+                <p>Finish the work</p>
+                <p>Take a bath</p>
+              </div>
+            </div>
+            <div class="covey-content" id="Important-Content">
+              <div class="covey-content-header" id="Important-Header">
+                Urgent / Not Important
+              </div>
+              <div class="covey-content-tasks">
+                <p>Hand in A3</p>
+                <p>Finish the work</p>
+                <p>Take a bath</p>
+              </div>
+            </div>
+            <div class="covey-content" id="NotUrgent-Content">
+              <div class="covey-content-header" id="NotUrgent-Header">
+                Not Urgent / Not Important
+              </div>
+              <div class="covey-content-tasks">
+                <p>Hand in A3</p>
+                <p>Finish the work</p>
+                <p>Take a bath</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="middle-two">
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/0pf6pJ1JNucnOBHiCaad0x?utm_source=generator"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+        </div>
+      </div>
 
+      <div class="container-three">
+        <div class="left-one"></div>
+        <div class="left-two">
+          <div class="keep-going" id="status"><p>Keep working!</p></div>
+          <div class="timerDisplay"><p>19m 20s</p></div>
+          <div class="pomoButtonContainer">
+            <button id="start-btn" class="startButton">START</button>
+            <button id="reset" class="startButton">RESET</button>
+          </div>
+
+          <div class="pomoButtons">
+            <div class="pomoLeftButton">
+              <div class="Duration">
+                <p>Work Duration</p>
+              </div>
+              <div class="timerButtons">
+                <button class="btn-settings" id="work-minus">-</button>
+                <div class="noodle"><span id="work-min">5</span> mins</div>
+                <button class="btn-settings" id="work-plus">+</button>
+              </div>
+            </div>
+            <div class="pomoRightButton">
+              <div class="Duration">
+                <p>Break Duration</p>
+              </div>
+              <div class="timerButtons">
+                <button class="btn-settings" id="break-minus">-</button>
+                <div class="noodle"><span id="break-min">5</span> mins</div>
+                <button class="btn-settings" id="break-plus">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="left-three">
+          <div class="stopwatch-time">
+            <div id="time">00:00:00</div>
+          </div>
+
+          <div>
+            <button
+              class="stopwatch-button"
+              id="start_stopwatch"
+              onclick="start()"
+            >
+              START
+            </button>
+            <button
+              class="stopwatch-button"
+              id="pause_stopwatch"
+              onclick="pause()"
+            >
+              PAUSE
+            </button>
+            <button
+              class="stopwatch-button"
+              id="reset_stopwatch"
+              onclick="reset()"
+            >
+              RESET
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="modalRoot" class="modal-root">
+        <div id="modalContent" class="modal-content">
+          <form id="new-task-form" onsubmit="handleAddNewTaskSubmit(event)">
+            <label for="name">Name</label>
+            <input required type="text" id="name" value="" />
+            <label for="dueDate">Due Date</label>
+            <input required type="date" id="dueDate" value="" />
+            <label for="priority">Priority</label>
+            <select required id="priority">
+              <option value="0">Low</option>
+              <option selected value="1">Medium</option>
+              <option value="2">High</option>
+            </select>
+            <label for="estimatedHours">Estimated Hours</label>
+            <input required type="number" id="estimatedHours" value="" />
+            <label for="estimatedMinutes">Estimated Minutes</label>
+            <input required type="number" id="estimatedMinutes" value="" />
+            <button onclick="handleCloseModal()">Cancel</button>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script type="text/javascript" src="./pomodoro.js"></script>
+  <script type="text/javascript" src="./stopwatch.js"></script>
+  <script type="text/javascript" src="./tasklist.js"></script>
 </html>
