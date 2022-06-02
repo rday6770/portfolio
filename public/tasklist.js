@@ -55,7 +55,7 @@ function makeTaskHtml(task) {
   return `
     <div class="task-box-element-one priority-${task.priority}"></div>
     <div class="task-box-content">
-      <div class="task-box-header">
+      <div class="task-box-header hpriority-${task.priority} ">
         <p>${task.name}</p>
       </div>
       <div class="task-box-subheader">

@@ -157,22 +157,37 @@
       <div id="modalRoot" class="modal-root">
         <div id="modalContent" class="modal-content">
           <form id="new-task-form" onsubmit="handleAddNewTaskSubmit(event)">
-            <label for="name">Name</label>
-            <input required type="text" id="name" value="" />
-            <label for="dueDate">Due Date</label>
-            <input required type="date" id="dueDate" value="" />
-            <label for="priority">Priority</label>
-            <select required id="priority">
-              <option value="0">Low</option>
-              <option selected value="1">Medium</option>
-              <option value="2">High</option>
-            </select>
-            <label for="estimatedHours">Estimated Hours</label>
-            <input required type="number" id="estimatedHours" value="" />
-            <label for="estimatedMinutes">Estimated Minutes</label>
-            <input required type="number" id="estimatedMinutes" value="" />
-            <button onclick="handleCloseModal()">Cancel</button>
-            <button type="submit">Submit</button>
+            <div class="form-Input">
+              <label for="name">Name</label>
+              <input required type="text" id="name" value="" />
+              <label for="dueDate">Due Date</label>
+              <input required type="date" id="dueDate" value="" />
+              <label for="priority">Priority</label>
+              <select required id="priority">
+                <option value="0">Low</option>
+                <option selected value="1">Medium</option>
+                <option value="2">High</option>
+              </select>
+              <label for="estimatedHours">Estimated Hours</label>
+              <input required type="number" id="estimatedHours" value="" />
+              <label for="estimatedMinutes">Estimated Minutes</label>
+              <input required type="number" id="estimatedMinutes" value="" />
+              <div class="form-button-container">
+                <button
+                  onclick="handleCloseModal()"
+                  class="form-button"
+                  id="formclose"
+                >
+                  Cancel
+                </button>
+                <div class="formbuttonempty">
+
+                </div>
+                <button type="submit" class="form-button" id="formsubmit">
+                  Submit
+                </button>
+              </div>
+            </div>
           </form>
         </div>
       </div>

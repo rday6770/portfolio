@@ -145,6 +145,18 @@ p {
   background-color: #ff5f5f;
 }
 
+.hpriority-0 {
+  color: #fdc500;
+}
+
+.hpriority-1 {
+  color: #ff985f;
+}
+
+.hpriority-2 {
+  color: #ff5f5f;
+}
+
 .container-one .task-container .task-box-content {
   display: flex;
   flex-direction: column;
@@ -163,7 +175,6 @@ p {
   font-weight: 800;
   font-size: 20px;
 
-  color: black;
   margin-left: 10px;
 }
 
@@ -185,7 +196,6 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: aquamarine;
   width: 40px;
   height: 40px;
   background: #eceeee;
@@ -556,6 +566,7 @@ p {
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 990;
+
   display: none;
   justify-content: center;
   align-items: center;
@@ -569,11 +580,93 @@ p {
   height: 500px;
   width: 500px;
   background-color: white;
+}
+
+.form-Input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   border-radius: 4px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+input {
+  width: 80%;
+  padding: 0.5em;
+  line-height: 1.1;
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
 
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
+}
+
+label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.form-button-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+}
+
+.form-button {
+  width: 100px;
+  height: 33px;
+  background: #8646ff;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  border: none;
+  opacity: 0.8;
+}
+
+.formbuttonempty {
+  width: 30px;
+}
+
+.form-button:hover {
+  opacity: 10;
+}
+
+#formclose {
+  background-color: #ee5050;
+}
+
+#formsubmit {
+  background-color: #a2e68a;
+}
+
+select {
+  width: 80%;
+  padding: 0.5em;
+  line-height: 1.1;
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .content {
+    flex-direction: column;
+    height: 4000px;
+  }
 }
