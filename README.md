@@ -48,8 +48,6 @@ Allowing for users to create an account would allow users to save their informat
 
 In order to make the Web App responsive changes needed to be made to the code, this could have been done to start with to improve the work flow and time management.
 
-![Prototype Picture](Prototype.jpg)
-
 ## References
 
 How I built my Pomodoro Clock app, and the lessons I learned along the way(2018, April 9). Retrieved 3 June 2022, from FreeCodeCamp.org
