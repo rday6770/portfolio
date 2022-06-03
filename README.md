@@ -54,3 +54,7 @@ How I built my Pomodoro Clock app, and the lessons I learned along the way(2018,
 website: https://www.freecodecamp.org/news/how-i-built-my-pomodoro-clock-app-and-the-lessons-i-learned-along-the-way-51288983f5ee/
 
 Stopwatch in javascript—Jsfiddle—Code playground. (n.d.). Retrieved 3 June 2022, from https://jsfiddle.net/2vwcd3a8/
+
+## Following Picture shows the final Design
+
+![Final Design Picture](Final.png)
