@@ -45,3 +45,8 @@ function toHHMMSS(time) {
 
   return hours + ":" + minutes + ":" + seconds;
 }
+
+/*
+Reference:
+ Stopwatch in javascript—Jsfiddle—Code playground. (n.d.). Retrieved 3 June 2022, from https://jsfiddle.net/2vwcd3a8/
+*/

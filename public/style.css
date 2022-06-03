@@ -180,7 +180,7 @@ p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 18px;
 
   margin-left: 10px;
 }
@@ -192,7 +192,7 @@ p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
 
   color: #727070;
   margin-left: 10px;
@@ -211,7 +211,7 @@ p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 900;
-  font-size: 12px;
+  font-size: 10px;
   color: #4f4f4f;
 }
 
@@ -263,20 +263,20 @@ p {
   flex-direction: column;
 }
 
-.container-two {
+.cardTwo {
   flex: 2 0 auto;
   display: flex;
   flex-direction: column;
 }
 
-.container-two .covey-container {
+.cardTwo .covey-container {
   display: grid;
   grid-gap: 15px;
   grid-template-columns: 1fr 1fr;
   height: 100%;
 }
 
-.container-two .covey-content {
+.cardTwo .covey-content {
   flex: 2 0 auto;
   background: rgba(255, 95, 95, 0.5);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -284,7 +284,7 @@ p {
   min-height: 100px;
 }
 
-.container-two .covey-content .covey-content-header {
+.cardTwo .covey-content .covey-content-header {
   background: #ff5f5f;
   border-radius: 15px;
   padding: 12px;
@@ -306,7 +306,7 @@ p {
   flex: 1 0 auto;
 }
 
-.container-two .covey-content .covey-content-tasks {
+.cardTwo .covey-content .covey-content-tasks {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -334,21 +334,75 @@ p {
   background: #ff985f;
 }
 
-.container-three {
+.cardThree {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.left-one {
+.Acronym {
   flex: 1 0 auto;
   background: #f9fbfa;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.left-two {
+#acronymMaker {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.acronymHeader {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 42px;
+
+  color: #898383;
+}
+
+#acronymSentence {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  padding: 5%;
+}
+
+#acronymRoot {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  color: #898383;
+  padding-bottom: 5%;
+}
+
+.acronymButton {
+  width: 150px;
+  height: 33px;
+  background: #8646ff;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  color: #ffffff;
+  border: none;
+  opacity: 0.8;
+  margin-top: 20px;
+}
+
+.pomodoroTimer {
   flex: 2 0 auto;
   background: #f9fbfa;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -361,27 +415,26 @@ p {
   justify-content: space-evenly;
 }
 
-.left-two .keep-going {
+.pomodoroTimer .keep-going {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  font-size: 35px;
-  line-height: 42px;
+  font-size: 40px;
 
   color: #898383;
 }
 
-.left-two .timerDisplay {
+.pomodoroTimer .timerDisplay {
   font-family: "Inter";
   font-style: normal;
   font-weight: 800;
-  font-size: 90px;
+  font-size: 80px;
   line-height: 109px;
 
   color: #8646ff;
 }
 
-.left-two .pomoButtonContainer {
+.pomodoroTimer .pomoButtonContainer {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -389,11 +442,11 @@ p {
   justify-content: space-evenly;
 }
 
-.left-two .startButton {
+.pomodoroTimer .startButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 164px;
+  width: 125px;
   height: 33px;
 
   background: #8646ff;
@@ -413,25 +466,25 @@ p {
   opacity: 10;
 }
 
-.left-two .pomoButtons {
+.pomodoroTimer .pomoButtons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.left-two .pomoButtons .pomoLeftButton {
+.pomodoroTimer .pomoButtons .pomoLeftButton {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.left-two .pomoButtons .pomoRightButton {
+.pomodoroTimer .pomoButtons .pomoRightButton {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.left-three {
+.stopwatchTimer {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
@@ -500,25 +553,25 @@ p {
   color: #898383;
 }
 
-.left-three .stopwatch-time {
+.stopwatchTimer .stopwatch-time {
   font-family: "Inter";
   font-style: normal;
   font-weight: 800;
-  font-size: 75px;
+  font-size: 65px;
   line-height: 91px;
 
   color: #c4c4c4;
 }
 
 .stopwatch-button {
-  width: 100px;
-  height: 33px;
+  width: 90px;
+  height: 30px;
   background: #8646ff;
   border-radius: 5px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 17px;
   color: #ffffff;
   border: none;
   opacity: 0.8;
@@ -651,7 +704,27 @@ select {
     grid-template-columns: 1fr;
     grid-gap: 20px;
   }
-  .container-two .covey-content {
+  .cardTwo .covey-content {
     min-height: 250px;
+  }
+
+  .task-list .task-container .task-box-content .task-box-subheader {
+    font-size: 10px;
+  }
+
+  .spotify-iframe {
+    min-height: 300px;
+  }
+
+  .pomodoroTimer {
+    min-height: 300px;
+  }
+
+  .stopwatchTimer {
+    min-height: 175px;
+  }
+
+  #time {
+    font-size: 60px;
   }
 }

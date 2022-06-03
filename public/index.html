@@ -27,7 +27,7 @@
         </button>
       </div>
       <div class="grid-column-section">
-        <div class="card container-two">
+        <div class="card cardTwo">
           <h2 class="card-heading">Covey Quadrant</h2>
           <div class="covey-container">
             <div class="covey-content">
@@ -79,16 +79,18 @@
         </div>
       </div>
       <div class="grid-column-section">
-        <div class="left-one">
+        <div class="Acronym">
           <form id="acronymMaker" onsubmit="makeAcronym(event)">
-            <label for="sentence">Sentence</label>
+            <label for="sentence" class="acronymHeader"
+              ><h2>Acronym generator</h2></label
+            >
             <input type="text" id="sentence" />
-            <button type="submit">Make acronym</button>
+            <button type="submit" class="acronymButton">Make acronym</button>
           </form>
-          <h2 id="acronymSentence"></h2>
-          <h1 id="acronymRoot"></h1>
+          <p id="acronymSentence"></p>
+          <p id="acronymRoot"></p>
         </div>
-        <div class="left-two">
+        <div class="pomodoroTimer">
           <div class="keep-going" id="status"><p>Keep working!</p></div>
           <div class="timerDisplay"><p>19m 20s</p></div>
           <div class="pomoButtonContainer">
@@ -120,7 +122,7 @@
           </div>
         </div>
 
-        <div class="left-three">
+        <div class="stopwatchTimer">
           <div class="stopwatch-time">
             <div id="time">00:00:00</div>
           </div>

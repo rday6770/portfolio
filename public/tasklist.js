@@ -16,6 +16,8 @@ function handleCloseModal() {
   modalContent.style.display = "none";
 }
 
+// Handles the opening and closing of the Modal
+
 function handleAddNewTaskSubmit(event) {
   event.preventDefault();
   const [nameEl, dudeDateEl, priorityEl, estimateHoursEl, estimateMinutesEl] =
@@ -30,6 +32,8 @@ function handleAddNewTaskSubmit(event) {
     estimatedMinutes: estimateMinutesEl.value,
     completed: false,
   };
+
+  // Function handleAddNewTaskSubmit handles the user inputs when the new task is submitted
 
   taskList.push(task);
   renderTask(task);
@@ -71,6 +75,8 @@ function makeTaskHtml(task) {
     <button onclick="handleDeleteTask(${task.id})" class="task-box-delete">Delete</button>
   `;
 }
+
+// Function makeTaskHtml allows the new data to be viewed on the site
 
 function updateTask(task) {
   const taskId = task.id;

@@ -84,9 +84,9 @@ function buttonDisplay() {
   if (isPaused && countdown === 0) {
     startBtn.textContent = "START";
   } else if (isPaused && countdown !== 0) {
-    startBtn.textContent = "Continue";
+    startBtn.textContent = "CONTINUE";
   } else {
-    startBtn.textContent = "Pause";
+    startBtn.textContent = "PAUSE";
   }
 }
 
@@ -102,3 +102,11 @@ function updateHTML() {
 
 window.setInterval(updateHTML, 100);
 // document.onclick = updateHTML;
+
+
+/*
+Reference:
+ How I built my Pomodoro Clock app, and the lessons I learned along the way. 
+ (2018, April 9). Retrieved 3 June 2022, from FreeCodeCamp.org 
+ website: https://www.freecodecamp.org/news/how-i-built-my-pomodoro-clock-app-and-the-lessons-i-learned-along-the-way-51288983f5ee/
+ */

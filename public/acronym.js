@@ -10,3 +10,5 @@ function makeAcronym(event) {
   acronymSentenceRoot.innerHTML = value;
   event.target.reset();
 }
+
+// Function makeAcronym gets the users input and returns the first letter from each word
