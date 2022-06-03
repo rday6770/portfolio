@@ -3,6 +3,8 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Inter";
+  background: linear-gradient(179.98deg, #cbafff 0.02%, #5bcdff 219.98%);
+  height: 100vh;
 }
 
 h1 {
@@ -61,9 +63,15 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background: white;
 
-  height: 10vh;
+  height: 100px;
   width: 100%;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .Header .Logo {
@@ -72,51 +80,50 @@ p {
 }
 
 .content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 90vh;
-
-  background: linear-gradient(179.98deg, #cbafff 0.02%, #5bcdff 219.98%);
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-gap: 30px;
+  padding: 130px 40px 40px 40px;
+  min-height: calc(100vh - 170px);
 }
 
-.container-one {
-  width: 503px;
-  height: 916px;
-
+.card {
+  position: relative;
   background: #f9fbfa;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
+  padding: 20px;
 }
 
-.container-one .heading {
-  padding: 0 5%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  height: 8%;
+.card-heading {
+  text-align: left;
+  margin: 0 0 20px 0;
 }
 
-.container-one .task-container {
+.task-list-button {
+  background: #8646ff;
+  border: none;
+  font-size: 17px;
+  border-radius: 30px;
+  opacity: 0.8;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.task-list .task-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-
-  height: 82%;
-  padding-top: 5%;
   gap: 15px;
 }
 
-.container-one .task-container .task-box {
+.task-list .task-container .task-box {
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  width: 450px;
-  height: 61px;
 
   background: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -127,7 +134,7 @@ p {
   padding-right: 10px;
 }
 
-.container-one .task-container .task-box-element-one {
+.task-list .task-container .task-box-element-one {
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -157,7 +164,7 @@ p {
   color: #ff5f5f;
 }
 
-.container-one .task-container .task-box-content {
+.task-list .task-container .task-box-content {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -166,7 +173,7 @@ p {
   height: 50px;
 }
 
-.container-one .task-container .task-box-content .task-box-header {
+.task-list .task-container .task-box-content .task-box-header {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -178,7 +185,7 @@ p {
   margin-left: 10px;
 }
 
-.container-one .task-container .task-box-content .task-box-subheader {
+.task-list .task-container .task-box-content .task-box-subheader {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -191,7 +198,7 @@ p {
   margin-left: 10px;
 }
 
-.container-one .task-container .task-box-element-two {
+.task-list .task-container .task-box-element-two {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,14 +215,14 @@ p {
   color: #4f4f4f;
 }
 
-.container-one .task-container .task-box-element-three {
+.task-list .task-container .task-box-element-three {
   width: 40px;
   height: 40px;
   border-radius: 10px;
   opacity: 0.8;
 }
 
-.container-one .task-container .task-box-element-three:hover {
+.task-list .task-container .task-box-element-three:hover {
   opacity: 10;
 }
 
@@ -251,49 +258,36 @@ p {
   background: #ee5050;
 }
 
-.container-two {
-  width: 580px;
-  height: 916px;
-
+.grid-column-section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-.container-two .covey-heading {
+.container-two {
+  flex: 2 0 auto;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: 5%;
-
-  height: 15%;
+  flex-direction: column;
 }
 
 .container-two .covey-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-evenly;
-
-  height: 85%;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
 }
 
 .container-two .covey-content {
-  width: 270px;
-  height: 220px;
-
+  flex: 2 0 auto;
   background: rgba(255, 95, 95, 0.5);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
+  min-height: 100px;
 }
 
 .container-two .covey-content .covey-content-header {
-  width: 270px;
-  height: 48px;
-
   background: #ff5f5f;
   border-radius: 15px;
+  padding: 12px;
 
   font-family: "Inter";
   font-style: normal;
@@ -305,6 +299,11 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.spotify-iframe {
+  padding-top: 30px;
+  flex: 1 0 auto;
 }
 
 .container-two .covey-content .covey-content-tasks {
@@ -336,45 +335,26 @@ p {
 }
 
 .container-three {
-  width: 509px;
-  height: 916px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.middle-one {
-  width: 580px;
-  height: 566.33px;
-  background: #f9fbfa;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
-}
-
-.middle-two {
-  width: 580px;
-  height: 317px;
-  background: #f9fbfa;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
-}
-
 .left-one {
-  width: 509px;
-  height: 239px;
+  flex: 1 0 auto;
   background: #f9fbfa;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
+  margin-bottom: 30px;
 }
 
 .left-two {
-  width: 509px;
-  height: 429px;
+  flex: 2 0 auto;
   background: #f9fbfa;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
 
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -452,12 +432,11 @@ p {
 }
 
 .left-three {
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 509px;
-  height: 192px;
   background: #f9fbfa;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
@@ -665,8 +644,14 @@ select {
 }
 
 @media only screen and (max-width: 1000px) {
+  .task-list {
+    min-height: 500px;
+  }
   .content {
-    flex-direction: column;
-    height: 4000px;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  .container-two .covey-content {
+    min-height: 250px;
   }
 }

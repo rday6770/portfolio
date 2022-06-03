@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <title>urWay</title>
   </head>
@@ -13,29 +14,21 @@
     </header>
 
     <section class="content">
-      <div class="container-one">
-        <div class="heading">
-          <h2>Tasklist</h2>
-        </div>
+      <div class="card task-list">
+        <h2 class="card-heading">Tasklist</h2>
         <div id="taskListRoot" class="task-container"></div>
-        <div class="heading">
-          <h4></h4>
-          <button
-            type="button"
-            id="openModalButton"
-            onclick="handleOpenModal()"
-            class="open-button"
-          >
-            +
-          </button>
-        </div>
+        <button
+          type="button"
+          id="openModalButton"
+          onclick="handleOpenModal()"
+          class="task-list-button"
+        >
+          +
+        </button>
       </div>
-      <div class="container-two">
-        <div class="middle-one">
-          <div class="covey-heading">
-            <h2>Covey Quadrant</h2>
-          </div>
-
+      <div class="grid-column-section">
+        <div class="card container-two">
+          <h2 class="card-heading">Covey Quadrant</h2>
           <div class="covey-container">
             <div class="covey-content">
               <div class="covey-content-header">Urgent / Important</div>
@@ -73,7 +66,7 @@
             </div>
           </div>
         </div>
-        <div class="middle-two">
+        <div class="spotify-iframe">
           <iframe
             style="border-radius: 12px"
             src="https://open.spotify.com/embed/playlist/0pf6pJ1JNucnOBHiCaad0x?utm_source=generator"
@@ -85,9 +78,16 @@
           ></iframe>
         </div>
       </div>
-
-      <div class="container-three">
-        <div class="left-one"></div>
+      <div class="grid-column-section">
+        <div class="left-one">
+          <form id="acronymMaker" onsubmit="makeAcronym(event)">
+            <label for="sentence">Sentence</label>
+            <input type="text" id="sentence" />
+            <button type="submit">Make acronym</button>
+          </form>
+          <h2 id="acronymSentence"></h2>
+          <h1 id="acronymRoot"></h1>
+        </div>
         <div class="left-two">
           <div class="keep-going" id="status"><p>Keep working!</p></div>
           <div class="timerDisplay"><p>19m 20s</p></div>
@@ -150,44 +150,46 @@
           </div>
         </div>
       </div>
-      <div id="modalRoot" class="modal-root">
-        <div id="modalContent" class="modal-content">
-          <form id="new-task-form" onsubmit="handleAddNewTaskSubmit(event)">
-            <div class="form-Input">
-              <label for="name">Name</label>
-              <input required type="text" id="name" value="" />
-              <label for="dueDate">Due Date</label>
-              <input required type="date" id="dueDate" value="" />
-              <label for="priority">Priority</label>
-              <select required id="priority">
-                <option value="0">Low</option>
-                <option selected value="1">Medium</option>
-                <option value="2">High</option>
-              </select>
-              <label for="estimatedHours">Estimated Hours</label>
-              <input required type="number" id="estimatedHours" value="" />
-              <label for="estimatedMinutes">Estimated Minutes</label>
-              <input required type="number" id="estimatedMinutes" value="" />
-              <div class="form-button-container">
-                <button
-                  onclick="handleCloseModal()"
-                  class="form-button"
-                  id="formclose"
-                >
-                  Cancel
-                </button>
-                <div class="formbuttonempty"></div>
-                <button type="submit" class="form-button" id="formsubmit">
-                  Submit
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
     </section>
+
+    <div id="modalRoot" class="modal-root">
+      <div id="modalContent" class="modal-content">
+        <form id="new-task-form" onsubmit="handleAddNewTaskSubmit(event)">
+          <div class="form-Input">
+            <label for="name">Name</label>
+            <input required type="text" id="name" value="" />
+            <label for="dueDate">Due Date</label>
+            <input required type="date" id="dueDate" value="" />
+            <label for="priority">Priority</label>
+            <select required id="priority">
+              <option value="0">Low</option>
+              <option selected value="1">Medium</option>
+              <option value="2">High</option>
+            </select>
+            <label for="estimatedHours">Estimated Hours</label>
+            <input required type="number" id="estimatedHours" value="" />
+            <label for="estimatedMinutes">Estimated Minutes</label>
+            <input required type="number" id="estimatedMinutes" value="" />
+            <div class="form-button-container">
+              <button
+                onclick="handleCloseModal()"
+                class="form-button"
+                id="formclose"
+              >
+                Cancel
+              </button>
+              <div class="formbuttonempty"></div>
+              <button type="submit" class="form-button" id="formsubmit">
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
   <script type="text/javascript" src="./pomodoro.js"></script>
   <script type="text/javascript" src="./stopwatch.js"></script>
   <script type="text/javascript" src="./tasklist.js"></script>
+  <script type="text/javascript" src="./acronym.js"></script>
 </html>
