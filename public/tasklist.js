@@ -33,6 +33,7 @@ function handleAddNewTaskSubmit(event) {
 
   taskList.push(task);
   renderTask(task);
+  renderCoveyTask(task);
   event.target.reset();
   handleCloseModal();
 }
@@ -87,4 +88,25 @@ function renderTask(task) {
   item.setAttribute("class", "task-box");
   item.innerHTML = makeTaskHtml(task);
   taskListRoot.appendChild(item);
+}
+
+function getRootForTask(task) {
+  const urgency =
+    new Date(task.dueDate).getTime() > new Date().getTime()
+      ? "NotUrgent"
+      : "Urgent";
+  if (task.priority < 1) {
+    return document.getElementById(`Covey${urgency}NotmportantList`);
+  } else {
+    return document.getElementById(`Covey${urgency}ImportantList`);
+  }
+}
+
+function renderCoveyTask(task) {
+  const item = document.createElement("p");
+  item.innerHTML = task.name;
+  const root = getRootForTask(task);
+  if (root) {
+    root.appendChild(item);
+  }
 }
